@@ -27,11 +27,12 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  height: 60px;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #111827;
   letter-spacing: 1px;
@@ -40,16 +41,17 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.5rem;
   font-weight: bold;
+  font-size: 1.125rem;
 }
 
 nav a {
   position: relative;
   text-decoration: none;
   color: #374151;
-  font-weight: 600;
   transition: 0.3s;
+
 }
 
 nav a::after {
@@ -76,29 +78,61 @@ nav a:hover {
   justify-content: space-between;
   padding: 10rem 8%;
   gap: 3rem;
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(135deg, #e0f2fe, #eef2ff, #f8fafc);
   min-height: 80vh;
 }
 
-.hero-content {
-  max-width: 900px;
-}
-.hero-content h1 span {
-  color: #2563eb;
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+
+  background: url("BIO IMAGE.jpg") no-repeat center 100%;
+  background-size: cover;
+
+
+  /* fade effect */
+  mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+
+  opacity: 0.8;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.intro {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #2563eb;
+  margin-bottom: 0.1rem;
+  font-weight: 700;
+}
+
+
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   line-height: 1.2;
   color: #111827;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 3px;
+  
 }
 
 .subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #4b5563;
   max-width: 500px;
+  line-height: 1.8;
 }
 
 .button {
@@ -117,27 +151,7 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-.profile-pic {
-  width: 320x;
-  height: 320px;
-  display: block;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 6px solid #fff;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-}
 
-.hero-image {
-  width: 360px;
-  height: 360px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #dbeafe, #e0e7ff);
-  border-radius: 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-  flex-shrink: 0;
-}
 
 /* Common Section Styling */
 section {
@@ -150,136 +164,84 @@ section h2 {
   text-align: center;
 }
 
-/* about*/
-
-.about {
-  padding: 5rem 8%;
-  background: #ffffff;
-  border-top: 1px solid #a3b6df;
-}
-.about h2 {
-  font-size: 2rem;
-  text-align: center;
-  color: #111827;
-  margin-bottom: 1.5rem;
+.side-section {
   position: relative;
+  padding: 5rem 8%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.about h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 3px;
-  background: #2563eb;
-  margin: 10px auto 0;
-  border-radius: 10px;
+
+.section-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.about p {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 1.08rem;
-  line-height: 1.9;
-  color: #4b5563;
-  background: #f9fafb;
+
+.info-box {
+  max-width: 600px;
+  width: 100%;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 18px;
-  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-/*Education*/
-.education {
-  padding: 5rem 8%;
-  text-align: center;
-  background: #ffffff;
-  border-top: 1px solid #a3b6df;
-}
-.edu-card {
-  max-width: 500px;
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  border-top: 4px solid #2563eb;
-  transition: 0.3s;
-}
-/* Hover effect */
-.edu-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-}
-.education h2 {
-  font-size: 2rem;
-  text-align: center;
-  color: #111827;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-.edu-card h3 {
-  font-size: 1.3rem;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
-}
-.edu-card p {
+.info-box p {
   color: #4b5563;
-  margin-bottom: 0.5rem;
-}
-.edu-card small {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #6b7280;
-  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
 }
 
-/* Skills */
-.skills {
-  padding: 5rem 8%;
-  background: #ffffff;
-  text-align: center;
-  border-top: 1px solid #a3b6df;
-}
-.skills h2 {
-  font-size: 2rem;
-  text-align: center;
+.side-label {
+  position: absolute;
+  top: 50%;
+  font-size: 2.3rem;
+  font-weight: 700;
   color: #111827;
-  margin-bottom: 1.5rem;
-  position: relative;
+  letter-spacing: 1px;
+  transform-origin: center;
 }
+
+.side-label.left {
+  left: 2rem;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.side-label.right {
+  right: 2rem;
+  transform: translateY(-50%) rotate(90deg);
+}
+
 .skills-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  max-width: 700px;
-  margin: 0 auto;
+  gap: 0.8rem;
+  flex-wrap: wrap;
 }
+
 .skill-tag {
-  background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+  background: #dbeafe;
   color: #1d4ed8;
-  padding: 10px 18px;
-  border-radius: 25px;
+  padding: 10px 16px;
+  border-radius: 999px;
   font-weight: 600;
-  font-size: 0.95rem;
-  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.12);
-  transition: 0.3s;
-}
-.skill-tag:hover {
-  transform: translateY(-4px);
-  background: #2563eb;
-  color: #ffffff;
+  font-size: 0.9rem;
 }
 
 /* Contact */
 .contact {
-  padding: 5rem 8%;
+  padding: 1rem ;
   text-align: center;
-  background: #f9fafb;
-  border-top: 1px solid #a3b6df;
+  
+ 
 }
 .contact h2 {
   font-size: 2rem;
   text-align: center;
-  color: #111827;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   position: relative;
 }
@@ -330,14 +292,14 @@ footer {
   }
 
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     padding: 4rem 5%;
-    min-height: auto;
+    gap: 2rem;
   }
 
   .hero-content h1 {
-    font-size: 2.3rem;
+    font-size: 2.8rem;
   }
 
   .subtitle {
@@ -345,9 +307,10 @@ footer {
   }
 
   .profile-pic {
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 320px;
   }
+
 
   section {
     padding: 4rem 5%;

@@ -1,56 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Cards - Project 2</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Cards - Project 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
 
-    <header>
-        <h1>Our Products</h1>
+  <section class="products-section">
+    <header class="section-header">
+      <p class="subtitle">Premium Collection</p>
+      <h1>Our Products</h1>
+      <div class="title-line"></div>
     </header>
 
     <div class="container">
-        
-        <!-- Product Card 1 -->
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Wireless Headphones">
-            <h3>Wireless Headphones</h3>
-            <p class="price">₹2,999</p>
-            <p>Premium noise cancelling headphones with 30-hour battery life.</p>
-            <button>Add to Cart</button>
-        </div>
 
-        <!-- Product Card 2 -->
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Smart Watch">
-            <h3>Smart Watch</h3>
-            <p class="price">₹4,499</p>
-            <p>Track your fitness, heart rate and notifications.</p>
-            <button>Add to Cart</button>
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <span class="badge">Best Seller</span>
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Wireless Headphones">
         </div>
+        <div class="card-content">
+          <h3>Wireless Headphones</h3>
+          <p class="price">₹2,999</p>
+          <p class="description">Premium noise cancelling headphones with 30-hour battery life.</p>
+          <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
 
-        <!-- Product Card 3 -->
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Laptop Stand">
-            <h3>Ergonomic Laptop Stand</h3>
-            <p class="price">₹1,299</p>
-            <p>Adjustable height with cooling vents.</p>
-            <button>Add to Cart</button>
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <span class="badge">Trending</span>
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80" alt="Smart Watch">
         </div>
+        <div class="card-content">
+          <h3>Smart Watch</h3>
+          <p class="price">₹4,499</p>
+          <p class="description">Track your fitness, heart rate, and notifications in style.</p>
+          <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
 
-        <!-- Product Card 4 -->
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Power Bank">
-            <h3>20000mAh Power Bank</h3>
-            <p class="price">₹1,899</p>
-            <p>Fast charging with 3 output ports.</p>
-            <button>Add to Cart</button>
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <span class="badge">Hot Pick</span>
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="Laptop Stand">
         </div>
+        <div class="card-content">
+          <h3>Ergonomic Laptop Stand</h3>
+          <p class="price">₹1,299</p>
+          <p class="description">Adjustable height stand with cooling support for better comfort.</p>
+          <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <span class="badge">Fast Charge</span>
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80" alt="Power Bank">
+        </div>
+        <div class="card-content">
+          <h3>20000mAh Power Bank</h3>
+          <p class="price">₹1,899</p>
+          <p class="description">Fast charging power bank with multiple output ports for travel.</p>
+          <button><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+        </div>
+      </div>
 
     </div>
+  </section>
 
 </body>
 </html>

@@ -1,91 +1,157 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>My Portfolio</h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">My<span>Portfolio</span></div>
 
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
     <section class="hero" id="home">
-      <div class="hero-text">
-        <h2>Hello, I'm <span>Your Name</span></h2>
-        <p>
-          I am a beginner web developer learning HTML, CSS, and building clean
-          websites.
+      <div class="hero-content">
+        <p class="badge">Beginner Web Developer</p>
+        <h1>Building creative websites with <span>HTML & CSS</span></h1>
+        <p class="hero-description">
+          Hi, I'm Your Name. I design modern, responsive, and creative websites while improving my frontend development skills step by step.
         </p>
-        <a href="#projects" class="btn">View My Work</a>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">See Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
       </div>
-      <div class="profile-card">YN</div>
+
+      <div class="hero-card">
+        <div class="profile-circle">YN</div>
+
+        <div class="mini-info">
+          <h2>Your Name</h2>
+          <p>Creative Frontend Learner</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>04</strong>
+            <span>Projects</span>
+          </div>
+
+          <div class="stat">
+            <strong>03</strong>
+            <span>Skills</span>
+          </div>
+
+          <div class="stat">
+            <strong>100%</strong>
+            <span>Learning</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="about" id="about">
+    <section id="about">
       <h2 class="section-title">About Me</h2>
-      <p>
-        I am passionate about web design and development. I enjoy creating
-        simple, responsive, and modern websites using HTML and CSS. My goal is
-        to improve my skills and build useful projects.
-      </p>
+      <p class="section-subtitle">A small intro about who I am and what I am learning.</p>
+
+      <div class="about-box">
+        <p>
+          I am a beginner web developer focused on learning HTML, CSS, responsive design, and modern website layouts. My goal is to build strong frontend skills by creating real projects instead of only reading theory.
+        </p>
+      </div>
     </section>
 
     <section id="skills">
       <h2 class="section-title">My Skills</h2>
-      <div class="skills-container">
-        <div class="skill">
+      <p class="section-subtitle">These are the core skills I am currently building.</p>
+
+      <div class="glass-grid">
+        <div class="glass-card">
+          <div class="icon">🧱</div>
           <h3>HTML</h3>
-          <p>Building clean page structure with semantic HTML.</p>
+          <p>Creating proper page structure using headings, sections, links, images, and semantic elements.</p>
         </div>
-        <div class="skill">
+
+        <div class="glass-card">
+          <div class="icon">🎨</div>
           <h3>CSS</h3>
-          <p>
-            Styling pages with layouts, colors, spacing, and responsive design.
-          </p>
+          <p>Designing attractive layouts with colors, spacing, shadows, gradients, cards, and hover effects.</p>
         </div>
-        <div class="skill">
+
+        <div class="glass-card">
+          <div class="icon">📱</div>
           <h3>Responsive Design</h3>
-          <p>Making websites look good on phones, tablets, and desktops.</p>
+          <p>Making websites work properly on mobile, tablet, laptop, and desktop screens.</p>
         </div>
       </div>
     </section>
 
     <section id="projects">
       <h2 class="section-title">Projects</h2>
-      <div class="projects-container">
-        <div class="project">
-          <h3>Landing Page</h3>
-          <p>A simple responsive landing page built with HTML and CSS.</p>
+      <p class="section-subtitle">Simple projects that show my frontend learning progress.</p>
+
+      <div class="glass-grid">
+        <div class="glass-card project-card">
+          <div>
+            <span class="project-tag">HTML + CSS</span>
+            <h3>Personal Bio Page</h3>
+            <p>A simple personal web page with sections for about, education, skills, and contact.</p>
+          </div>
+          <a href="#" class="btn btn-secondary">View Project</a>
         </div>
-        <div class="project">
-          <h3>Portfolio Website</h3>
-          <p>A personal website to showcase my skills and projects.</p>
+
+        <div class="glass-card project-card">
+          <div>
+            <span class="project-tag">Cards Layout</span>
+            <h3>Product Cards</h3>
+            <p>A product card layout with images, prices, descriptions, and styled buttons.</p>
+          </div>
+          <a href="#" class="btn btn-secondary">View Project</a>
         </div>
-        <div class="project">
-          <h3>Contact Page</h3>
-          <p>A clean contact section with basic information and design.</p>
+
+        <div class="glass-card project-card">
+          <div>
+            <span class="project-tag">Portfolio</span>
+            <h3>Creative Portfolio</h3>
+            <p>This modern portfolio design using glassmorphism, gradients, and responsive layout.</p>
+          </div>
+          <a href="#" class="btn btn-secondary">View Project</a>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section id="contact">
       <h2 class="section-title">Contact Me</h2>
-      <p>Email: yourname@example.com</p>
-      <p>Phone: +94 000 000 000</p>
-      <p>Location: Sri Lanka</p>
-    </section>
+      <p class="section-subtitle">Use these details to connect with me.</p>
 
-    <footer>
-      <p>&copy; 2026 Your Name. All rights reserved.</p>
-    </footer>
-  </body>
+      <div class="contact-box">
+        <h3>Let's build something clean and useful.</h3>
+        <p>Email: yourname@example.com</p>
+        <p>Phone: +94 000 000 000</p>
+        <p>Location: Sri Lanka</p>
+
+        <div class="contact-links">
+          <a href="mailto:yourname@example.com">Email Me</a>
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Your Name. Designed with HTML & CSS.</p>
+  </footer>
+</body>
 </html>

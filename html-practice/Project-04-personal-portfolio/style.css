@@ -21,9 +21,21 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(0, 255, 255, 0.18), transparent 30%),
-    radial-gradient(circle at 80% 10%, rgba(168, 85, 247, 0.22), transparent 28%),
-    radial-gradient(circle at 60% 80%, rgba(59, 130, 246, 0.18), transparent 30%);
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(0, 255, 255, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(168, 85, 247, 0.22),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 60% 80%,
+      rgba(59, 130, 246, 0.18),
+      transparent 30%
+    );
   z-index: -2;
 }
 
@@ -122,6 +134,7 @@ nav a:hover::after {
 .hero h1 span {
   background: linear-gradient(90deg, #22d3ee, #a855f7, #f472b6);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -293,7 +306,11 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.16), rgba(168, 85, 247, 0.12));
+  background: linear-gradient(
+    135deg,
+    rgba(34, 211, 238, 0.16),
+    rgba(168, 85, 247, 0.12)
+  );
   opacity: 0;
   transition: 0.35s;
 }
